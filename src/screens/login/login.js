@@ -27,7 +27,6 @@ export const Login = props => {
         if (localStorage.getItem(LocalStorageKeys.authToken)) {
             navigate(LoginSuccess())
         }
-        console.log("here")
     })
 
     return <div className={classes.root}>

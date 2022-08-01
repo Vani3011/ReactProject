@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { TopNavBar, SideNavBar } from '../components';
+import { TopNavBar, SideNavBar,Footer } from '../components';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,11 +41,15 @@ const withNavBars = (Component) => (props) => {
       {<div className={classes.sideNavbar}>
         <SideNavBar />
       </div>}
-
+     
       {/* Content */}
       <div className={classes.content}>
         <Component {...props}>{props.children}</Component>
       </div>
+       {/*footer*/}
+       <div>
+        {/* <Footer/> */}
+       </div>
     </div>
   );
 };

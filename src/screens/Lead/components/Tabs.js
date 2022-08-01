@@ -69,9 +69,6 @@ export const Tabs = () => {
     PhoneCall:<PhoneIcon/>
   }]
  
-
-
-  console.log(open, "open")
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };

@@ -3,5 +3,11 @@ export const AppRoutes = {
   login: "/login",
   test:'/test',
   lead:'/lead',
-  sample:'/sample'
+  sample:'/sample',
+  example:'/example',
+  dashboard:'/dashboard',
+  newDashboard:"/newDashboard",
+  search:"/search",
+  userManagement:"/userManagement",
+  multipleImage:"/multipleImage"
 };

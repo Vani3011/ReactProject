@@ -5,22 +5,22 @@ export const CreateSampleContext = createContext();
 const CreateSampleProvider = (props) => {
 const [TableData, setTableData] = useState([
     {
-        id: "E101",
+      
         Name: "Ajay",
-        price: 500000,
-        Property_Name: 9815215233
+        Role: "student",
+        Number: 9815215233
       },
       {
-        id: "E101",
+        
         Name: "Arjun",
-        price: 500000,
-        Property_Name: 9815215233
+        Role: "student",
+        Number: 9815215233
       }
 ])
-const test="hi"
+const [open,setOpen]=useState(false)
 
     return (
-        <CreateSampleContext.Provider value={{TableData, setTableData ,test}}>
+        <CreateSampleContext.Provider value={{TableData, setTableData ,open,setOpen}}>
             {props.children}
         </CreateSampleContext.Provider>
     )

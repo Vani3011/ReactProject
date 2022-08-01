@@ -1,6 +1,6 @@
 import React from "react";
 import {Lead} from "./lead"
-import { withNavBars } from "./../../HOCs";
+// import { withNavBars } from "./../../HOCs";
 
 
 class LeadParent extends React.Component {
@@ -9,4 +9,4 @@ class LeadParent extends React.Component {
   }
 }
 
-export default withNavBars(LeadParent);
+export default LeadParent;

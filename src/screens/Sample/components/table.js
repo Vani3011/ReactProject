@@ -1,15 +1,16 @@
-import React, { useContext, useState } from "react"
+
+import Button from "@mui/material/Button"
+import React, { useContext } from "react"
 import { TableList } from "../../../components"
-// import CreateSampleContext from "../context"
+import { CreateSampleContext } from "../context"
 
 export const Table = () =>{
-    // const TableData = useContext(CreateSampleContext)
-    // console.log(TableData)
+    const {TableData,setOpen} = useContext(CreateSampleContext)
 
 return(
     <>
- 
-      hi
+    <Button variant="contained" sx={{float:"right",marginBottom:"15px"}} onClick={()=>{setOpen(true)}}>+ Add</Button>
+    <TableList data={TableData}/>
     </>
 )
 }

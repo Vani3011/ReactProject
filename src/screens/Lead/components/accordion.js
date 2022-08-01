@@ -1,13 +1,10 @@
-import React from "react";
-import { Grid } from "@mui/material";
-import Card from '@mui/material/Card';
-import { useStyles } from "./styles";
-import PersonIcon from '@mui/icons-material/Person';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
+import Card from '@mui/material/Card';
+import React from "react";
+import { useStyles } from "./styles";
 
 export const Accordion = ({AccordionData}) => {
-    console.log(AccordionData,"AccordionData")
     const classes = useStyles()
     return (
         <div className={`${classes.accordionhdr}`}>

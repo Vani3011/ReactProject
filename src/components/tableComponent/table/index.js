@@ -7,6 +7,7 @@ import TableRow from '@mui/material/TableRow';
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import { ModalBox } from "../../Modal";
 import { useStyles } from "./styles";
+import { TableContainer } from "@mui/material";
 export const TableList = ({ data = [], checked = false, icons = false, Activity_icons = [] }) => {
     const [open, setOpen] = useState(false)
     console.log(data)
@@ -14,12 +15,13 @@ export const TableList = ({ data = [], checked = false, icons = false, Activity_
     const classes = useStyles()
     return (
         <div>
-            <Table>
+            <TableContainer style={{ maxHeight: 300 }}>
+            <Table stickyHeader>
                 <TableHead>
                     <TableRow className={`${classes.tableHeader}`}>
                         {(checked === true || icons === true) && <TableCell></TableCell>}
                         {headers.map(header => (
-                            <TableCell align="center" >{header}</TableCell>
+                            <TableCell align="center" style={{backgroundColor:"#E9EDF6",color:"black"}}>{header}</TableCell>
                         ))}
                     </TableRow>
                 </TableHead>
@@ -36,6 +38,7 @@ export const TableList = ({ data = [], checked = false, icons = false, Activity_
                     ))}
                 </TableBody>
             </Table>
+            </TableContainer>
             <ModalBox open={open} handleClose={() => setOpen(false)} title="View To Do" buttonName="Mark as Complete" />
 
         </div>

@@ -3,7 +3,6 @@ import TextField from '@mui/material/TextField';
 
 export const TextBox = ({
     value = "",
-    defaultValue="",
     onChange=()=>false,
     label="Text",
     placeholder="Text"
@@ -15,7 +14,7 @@ export const TextBox = ({
                     label={label}
                     placeholder={placeholder}
                     value={value}
-                    defaultValue={defaultValue}
+                   
                     onChange={onChange}
                     size="small"
                     fullWidth

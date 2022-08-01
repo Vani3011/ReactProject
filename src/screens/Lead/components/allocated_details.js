@@ -5,8 +5,6 @@ import { useStyles } from "./styles";
 import { Grid } from "@mui/material";
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 
-// import { BreadCrumb } from "../../../components/breadCrumb/breadcrumb"
-
 
 export const AllocatedDetails = () => {
     const classes = useStyles()

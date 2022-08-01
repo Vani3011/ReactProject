@@ -1,15 +1,15 @@
 import React from "react";
 import { Sample } from "./sample"
 import { withNavBars } from "../../HOCs";
-import  CreateSampleContext  from "./context";
+import  CreateSampleProvider  from "./context";
 
 
 const SampleParent = () =>{
    
         return(
-            <CreateSampleContext>
+            <CreateSampleProvider>
                 <Sample />
-            </CreateSampleContext>
+            </CreateSampleProvider>
         )
     
 }

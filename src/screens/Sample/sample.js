@@ -1,15 +1,13 @@
-import React ,{useContext} from "react"
-import { Table } from "./components"
-import CreateSampleContext from "./context"
+import React from "react"
+import { Form, Table } from "./components"
+import { useStyles } from "./styles"
 
 export const Sample = () => {
-    const test = useContext(CreateSampleContext)
-
-    // const TableData = useContext(CreateSampleContext)
-    console.log("Table",test)
+    const classes=useStyles()
     return (
-        <div>
-           hi
+        <div className={`${classes.tableMain}`}>
+           <Table/>
+           <Form/>
         </div>
     )
 }

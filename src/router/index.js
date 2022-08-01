@@ -13,8 +13,15 @@ import {
   Login,
   Test,
   Lead,
-  Sample
+  Sample,
+  Example,
+  Dashboard,
+  NewDashboard,
+  SearchFunc,
+  UserManagement,
+  Announcement,
 } from './../screens';
+
 
 const RouterApp = (props) => {
 
@@ -32,6 +39,19 @@ const RouterApp = (props) => {
         <Route path={AppRoutes.lead} element={<Lead />} />
         <Route path={AppRoutes.test} element={<Test />} />
         <Route path={AppRoutes.sample} element={<Sample />} />
+        <Route path={AppRoutes.example} element={<Example />} />
+        <Route path={AppRoutes.dashboard} element={<Dashboard />} />
+        <Route path={AppRoutes.newDashboard} element={<NewDashboard />} />
+        <Route path={AppRoutes.search} element={<SearchFunc />} />
+        <Route path={AppRoutes.userManagement} element={<UserManagement />} />
+        <Route path={AppRoutes.multipleImage} element={<Announcement />} />
+
+        
+
+
+
+
+
 
 
         {/* Login Route */}

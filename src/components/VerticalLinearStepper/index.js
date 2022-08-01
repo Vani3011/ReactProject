@@ -1,21 +1,15 @@
-import * as React from 'react';
+import { Card } from '@mui/material';
 import Box from '@mui/material/Box';
-import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-import StepContent from '@mui/material/StepContent';
-// import NoteAddIcon from '@material-ui/icons/NoteAdd';
-import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
-// import AddAlertIcon from '@material-ui/icons/AddAlert';
-import { makeStyles } from '@mui/styles';
+import Stepper from '@mui/material/Stepper';
+import * as React from 'react';
 import { useStyles } from './styles';
-import { Card } from '@mui/material';
 
 
 
-export const VerticalLinearStepper = ({steps=[]}) => {
+export const VerticalLinearStepper = ({ steps = [] }) => {
 
-console.log(steps,"steps")
   const CustomStepIcon = (props) => {
 
 
@@ -27,14 +21,14 @@ console.log(steps,"steps")
 
     return (
       <div
-      className={`${classes.dotted_div}`}
-    >
-      {stepIcons[String(props.icon)]}
-    </div>
+        className={`${classes.dotted_div}`}
+      >
+        {stepIcons[String(props.icon)]}
+      </div>
     );
   };
-  const classes=useStyles()
-  const [activeStep, setActiveStep] = React.useState(0);
+  const classes = useStyles()
+  const [activeStep] = React.useState(0);
 
 
   return (
@@ -43,19 +37,15 @@ console.log(steps,"steps")
         {steps.map((step, index) => (
           <Step key={step.label}>
             <StepLabel
-             StepIconComponent={CustomStepIcon}
+              StepIconComponent={CustomStepIcon}
             >
               <Card className={`${classes.stepperCard}`}> {step.label}</Card>
-             
+
             </StepLabel>
-            {/* <StepContent>
-              <Typography>{step.description}</Typography>
-          
-            </StepContent> */}
           </Step>
         ))}
       </Stepper>
-     
+
     </Box>
   );
 }
